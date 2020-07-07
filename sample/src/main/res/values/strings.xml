@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">adaptersample</string>
+    <string name="menu_text_cancel">取消</string>
+    <string name="menu_text_select_all">全选</string>
+    <string name="menu_text_edit">编辑</string>
+</resources>

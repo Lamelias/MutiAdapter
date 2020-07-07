@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerView" type="id" />
+    <item name="tv_section" type="id" />
+    <item name="tv_empty" type="id" />
+    <item name="group_edit" type="id" />
+    <item name="action_cancel" type="id" />
+    <item name="action_select_all" type="id" />
+    <item name="action_edit" type="id" />
+</resources>
