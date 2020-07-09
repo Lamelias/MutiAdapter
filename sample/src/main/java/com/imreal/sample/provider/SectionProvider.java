@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.imreal.mutiadapter.ViewTypePool;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.SectionViewHolder;
 import com.imreal.sample.item.SectionItem;
@@ -20,7 +21,7 @@ public class SectionProvider implements IViewProvider<SectionViewHolder, Section
 
     @Override
     public SectionViewHolder createViewHolder(ViewGroup parent, int viewType) {
-        return new SectionViewHolder(inflate(parent));
+        return new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false));
     }
 
     @Override
@@ -33,8 +34,9 @@ public class SectionProvider implements IViewProvider<SectionViewHolder, Section
         return R.layout.item_section;
     }
 
-    private View inflate(ViewGroup parent) {
-        return LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false);
+    @Override
+    public boolean supportViewType(int viewType) {
+        return ViewTypePool.obtainType(SectionItem.class) == viewType;
     }
 
     @Override

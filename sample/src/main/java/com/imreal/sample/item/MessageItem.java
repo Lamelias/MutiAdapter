@@ -2,8 +2,8 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
-import com.imreal.sample.R;
 import com.imreal.mutiadapter.IItem;
+import com.imreal.mutiadapter.ViewTypePool;
 
 /**
  * @Author: Daihaitao
@@ -20,7 +20,7 @@ public class MessageItem implements IItem, Comparable<MessageItem> {
 
     @Override
     public int getViewType() {
-        return R.layout.item_message;
+        return ViewTypePool.obtainType(MessageItem.class);
     }
 
     @Override

@@ -2,8 +2,8 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
-import com.imreal.sample.R;
 import com.imreal.mutiadapter.IItem;
+import com.imreal.mutiadapter.ViewTypePool;
 
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public class SectionItem implements IItem {
 
     @Override
     public int getViewType() {
-        return R.layout.item_section;
+        return ViewTypePool.obtainType(SectionItem.class);
     }
 
     @Override

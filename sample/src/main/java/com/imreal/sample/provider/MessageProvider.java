@@ -1,9 +1,11 @@
 package com.imreal.sample.provider;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.imreal.mutiadapter.ViewTypePool;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.MessageViewHolder;
 import com.imreal.sample.item.MessageItem;
@@ -20,7 +22,7 @@ public class MessageProvider implements IViewProvider<MessageViewHolder, Message
 
     @Override
     public MessageViewHolder createViewHolder(ViewGroup parent, int viewType) {
-        return new MessageViewHolder(inflate(parent));
+        return new MessageViewHolder(LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false));
     }
 
     @Override
@@ -33,8 +35,9 @@ public class MessageProvider implements IViewProvider<MessageViewHolder, Message
         return R.layout.item_message;
     }
 
-    private View inflate(ViewGroup parent){
-        return LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false);
+    @Override
+    public boolean supportViewType(int viewType) {
+        return ViewTypePool.obtainType(MessageItem.class) == viewType;
     }
 
     @Override

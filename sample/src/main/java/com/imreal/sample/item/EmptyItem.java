@@ -2,8 +2,8 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
-import com.imreal.sample.R;
 import com.imreal.mutiadapter.IItem;
+import com.imreal.mutiadapter.ViewTypePool;
 
 /**
  * @Author: Daihaitao
@@ -14,7 +14,7 @@ public class EmptyItem implements com.imreal.mutiadapter.IItem {
 
     @Override
     public int getViewType() {
-        return R.layout.item_empty;
+        return ViewTypePool.obtainType(EmptyItem.class);
     }
 
     @Override

@@ -5,9 +5,13 @@ import android.os.Parcelable;
 /**
  * @Author: Daihaitao
  * @Date: 2020/7/6 14:33
- * @Description:
+ * @Description: Items which {@link MutiAdapter} contains must implement this interface
  */
 public interface IItem extends Parcelable {
+
+    int NO_TYPE = -1;
+    int NO_ID = -1;
+
     /**
      * @return The view type of this item
      */
@@ -31,7 +35,7 @@ public interface IItem extends Parcelable {
     boolean areContentsTheSame(IItem newItem);
 
     /**
-     * @return  True if can be selected in edit mode
+     * @return True if can be selected in edit mode
      */
     boolean supportSelected();
 }

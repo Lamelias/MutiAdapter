@@ -3,6 +3,7 @@ package com.imreal.sample.provider;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.imreal.mutiadapter.ViewTypePool;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.EmptyViewHolder;
 import com.imreal.sample.item.EmptyItem;
@@ -20,7 +21,7 @@ public class EmptyProvider implements IViewProvider<EmptyViewHolder, EmptyItem> 
 
     @Override
     public EmptyViewHolder createViewHolder(ViewGroup parent, int viewType) {
-        return new EmptyViewHolder(LayoutInflater.from(parent.getContext()).inflate(getLayoutId(),parent,false));
+        return new EmptyViewHolder(LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false));
     }
 
     @Override
@@ -31,6 +32,11 @@ public class EmptyProvider implements IViewProvider<EmptyViewHolder, EmptyItem> 
     @Override
     public int getLayoutId() {
         return R.layout.item_empty;
+    }
+
+    @Override
+    public boolean supportViewType(int viewType) {
+        return ViewTypePool.obtainType(EmptyItem.class) == viewType;
     }
 
     @Override

@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements IDetailsProvider 
 
         mutiAdapter = new MutiAdapter();
         mutiAdapter.registerProviders(new MessageProvider(), new SectionProvider(), new EmptyProvider());
-        mutiAdapter.registerFilter(new SectionFilter(), new HeaderFooterFilter(), new EmptyFilter());
+        mutiAdapter.registerFilters(new SectionFilter(), new HeaderFooterFilter(), new EmptyFilter());
         mutiAdapter.setUpDataSet(new ArrayList<IItem>());
 
         recyclerView = findViewById(R.id.recyclerView);
