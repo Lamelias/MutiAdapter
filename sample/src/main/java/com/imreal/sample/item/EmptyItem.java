@@ -2,20 +2,15 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
+import com.imreal.mutiadapter.AbsItem;
 import com.imreal.mutiadapter.IItem;
-import com.imreal.mutiadapter.ViewTypePool;
 
 /**
  * @Author: Daihaitao
  * @Date: 2020/7/7 11:13
  * @Description:
  */
-public class EmptyItem implements com.imreal.mutiadapter.IItem {
-
-    @Override
-    public int getViewType() {
-        return ViewTypePool.obtainType(EmptyItem.class);
-    }
+public class EmptyItem extends AbsItem {
 
     @Override
     public long getItemId() {

@@ -2,6 +2,7 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
+import com.imreal.mutiadapter.AbsItem;
 import com.imreal.mutiadapter.IItem;
 import com.imreal.mutiadapter.ViewTypePool;
 
@@ -12,7 +13,7 @@ import java.util.Objects;
  * @Date: 2020/7/6 19:38
  * @Description:
  */
-public class SectionItem implements IItem {
+public class SectionItem extends AbsItem {
 
     public String sectionTitle;
     public int section;

@@ -17,7 +17,7 @@ public class HeaderFooterFilter implements MutiAdapter.Filter {
     public List<IItem> filter(List<IItem> src) {
         if (!src.isEmpty()) {
             src.add(0, new SectionItem("HEADER"));
-            src.add(src.size(), new SectionItem("FOOTER"));
+            src.add(new SectionItem("FOOTER"));
         }
         return src;
     }

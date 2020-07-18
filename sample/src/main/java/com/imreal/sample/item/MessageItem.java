@@ -2,6 +2,7 @@ package com.imreal.sample.item;
 
 import android.os.Parcel;
 
+import com.imreal.mutiadapter.AbsItem;
 import com.imreal.mutiadapter.IItem;
 import com.imreal.mutiadapter.ViewTypePool;
 
@@ -10,7 +11,7 @@ import com.imreal.mutiadapter.ViewTypePool;
  * @Date: 2020/7/6 18:19
  * @Description:
  */
-public class MessageItem implements IItem, Comparable<MessageItem> {
+public class MessageItem extends AbsItem implements Comparable<MessageItem> {
 
     public long timeStamp;
 

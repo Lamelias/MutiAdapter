@@ -194,7 +194,7 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
     @NonNull
     private IViewProvider findSuitableProvider(@NonNull MutiViewHolder viewHolder) {
         for (IViewProvider provider : mProviders) {
-            if (provider.getViewHolderClass().isInstance(viewHolder)) {
+            if (provider.supportViewHolder(viewHolder)) {
                 return provider;
             }
         }

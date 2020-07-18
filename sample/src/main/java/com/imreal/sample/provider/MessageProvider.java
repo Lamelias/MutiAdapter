@@ -5,6 +5,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.imreal.mutiadapter.AbsViewProvider;
 import com.imreal.mutiadapter.ViewTypePool;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.MessageViewHolder;
@@ -18,7 +19,7 @@ import com.imreal.mutiadapter.MutiViewHolder;
  * @Date: 2020/7/6 14:40
  * @Description:
  */
-public class MessageProvider implements IViewProvider<MessageViewHolder, MessageItem> {
+public class MessageProvider extends AbsViewProvider<MessageViewHolder, MessageItem> {
 
     @Override
     public MessageViewHolder createViewHolder(ViewGroup parent, int viewType) {
@@ -33,16 +34,6 @@ public class MessageProvider implements IViewProvider<MessageViewHolder, Message
     @Override
     public int getLayoutId() {
         return R.layout.item_message;
-    }
-
-    @Override
-    public boolean supportViewType(int viewType) {
-        return ViewTypePool.obtainType(MessageItem.class) == viewType;
-    }
-
-    @Override
-    public Class<? extends MutiViewHolder> getViewHolderClass() {
-        return MessageViewHolder.class;
     }
 
 }
