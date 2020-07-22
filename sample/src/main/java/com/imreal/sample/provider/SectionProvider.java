@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.imreal.mutiadapter.AbsViewProvider;
-import com.imreal.mutiadapter.ISelectionTracker;
+import com.imreal.mutiadapter.selection.ISelectionTracker;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.SectionViewHolder;
 import com.imreal.sample.item.SectionItem;

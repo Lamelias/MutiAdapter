@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.imreal.mutiadapter.selection.ISelectionTracker;
+
 /**
  * @Author: Daihaitao
  * @Date: 2020/7/6 14:43

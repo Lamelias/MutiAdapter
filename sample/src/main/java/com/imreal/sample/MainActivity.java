@@ -28,7 +28,6 @@ import com.imreal.sample.selection.ItemSelectionTracker;
 import com.imreal.sample.selection.KeyProvider;
 import com.imreal.mutiadapter.IItem;
 import com.imreal.mutiadapter.MutiAdapter;
-import com.imreal.mutiadapter.Utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements IDetailsProvider 
         } else if (item.getItemId() == R.id.action_edit) {
             enterEditMode();
         } else if (item.getItemId() == R.id.action_select_all) {
-            selectionTracker.setItemsSelected(mutiAdapter.getSelectableKeys(), true);
+            selectionTracker.setItemsSelected(mutiAdapter.getSelectionKeys(), true);
         }
         return super.onOptionsItemSelected(item);
     }

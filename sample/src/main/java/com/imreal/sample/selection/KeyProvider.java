@@ -38,7 +38,7 @@ public class KeyProvider extends ItemKeyProvider<IItem> {
 
     @Override
     public int getPosition(@NonNull IItem key) {
-        return adapter.getPosition(key);
+        return adapter.getPositionForKey(key);
     }
 
 }

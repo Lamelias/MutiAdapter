@@ -9,9 +9,14 @@ import androidx.recyclerview.widget.AsyncListDiffer;
 import androidx.recyclerview.widget.ListUpdateCallback;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.imreal.mutiadapter.selection.ISelectable;
+import com.imreal.mutiadapter.selection.ISelectionTracker;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: Daihaitao
@@ -26,6 +31,7 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
     private List<Filter> mFilters = new LinkedList<>();
     private ISelectionTracker mSelectionTracker;
     private ItemListUpdateCallback mItemListUpdateCallback;
+    private Map<IItem, Integer> mSelectionKeyPositionMap = new HashMap<>();
 
     public MutiAdapter() {
         super();
@@ -72,14 +78,23 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
     }
 
     @Override
+    public int getPositionForKey(IItem item) {
+        Integer pos = mSelectionKeyPositionMap.get(item);
+        if (pos == null) {
+            return IItem.NO_POSITION;
+        }
+        return pos;
+    }
+
+    @Override
     @Nullable
-    public IItem getKey(int position) {
+    public IItem getSelectionKey(int position) {
         return getItem(position);
     }
 
     @Override
     @NonNull
-    public List<IItem> getSelectableKeys() {
+    public List<IItem> getSelectionKeys() {
         List<IItem> selectableKeys = new ArrayList<>();
         for (IItem item : mDataSet) {
             if (item.supportSelected()) {
@@ -87,11 +102,6 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
             }
         }
         return selectableKeys;
-    }
-
-    @Override
-    public int getPosition(IItem item) {
-        return mDataSet.indexOf(item);
     }
 
     /**
@@ -138,6 +148,9 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
     public void setUpDataSet(@NonNull List<IItem> items) {
         for (Filter filter : mFilters) {
             items = filter.filter(items);
+        }
+        for (int i = 0; i < items.size(); i++) {
+            mSelectionKeyPositionMap.put(items.get(i), i);
         }
         mDiff.submitList(items);
     }

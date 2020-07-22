@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.imreal.sample.R;
 import com.imreal.sample.item.SectionItem;
-import com.imreal.mutiadapter.ISelectionTracker;
+import com.imreal.mutiadapter.selection.ISelectionTracker;
 import com.imreal.mutiadapter.MutiViewHolder;
 
 /**

@@ -1,4 +1,4 @@
-package com.imreal.mutiadapter;
+package com.imreal.sample;
 
 import android.content.res.Resources;
 import android.util.Log;

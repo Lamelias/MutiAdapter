@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.recyclerview.selection.SelectionTracker;
 
 import com.imreal.mutiadapter.IItem;
-import com.imreal.mutiadapter.ISelectionTracker;
+import com.imreal.mutiadapter.selection.ISelectionTracker;
 
 import java.util.ArrayList;
 import java.util.Iterator;

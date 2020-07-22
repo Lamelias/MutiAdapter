@@ -9,7 +9,7 @@ import androidx.recyclerview.selection.ItemDetailsLookup;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.imreal.mutiadapter.IItem;
-import com.imreal.mutiadapter.ISelectable;
+import com.imreal.mutiadapter.selection.ISelectable;
 
 /**
  * @Author: Daihaitao
@@ -34,7 +34,7 @@ public class DetailsLookup extends ItemDetailsLookup<IItem> {
             int adapterPosition = holder.getAdapterPosition();
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
             if(adapter instanceof ISelectable){
-                return  new Details(adapterPosition, (IItem) ((ISelectable) adapter).getKey(adapterPosition), mDetailsProvider);
+                return  new Details(adapterPosition, (IItem) ((ISelectable) adapter).getSelectionKey(adapterPosition), mDetailsProvider);
             }
         }
         return null;

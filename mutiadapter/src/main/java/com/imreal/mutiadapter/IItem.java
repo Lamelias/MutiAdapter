@@ -11,6 +11,7 @@ public interface IItem extends Parcelable {
 
     int NO_TYPE = -1;
     int NO_ID = -1;
+    int NO_POSITION = -1;
 
     /**
      * @return The view type of this item

@@ -1,18 +1,13 @@
 package com.imreal.sample.provider;
 
 import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.imreal.mutiadapter.AbsViewProvider;
-import com.imreal.mutiadapter.ViewTypePool;
 import com.imreal.sample.R;
 import com.imreal.sample.holder.MessageViewHolder;
 import com.imreal.sample.item.MessageItem;
-import com.imreal.mutiadapter.ISelectionTracker;
-import com.imreal.mutiadapter.IViewProvider;
-import com.imreal.mutiadapter.MutiViewHolder;
+import com.imreal.mutiadapter.selection.ISelectionTracker;
 
 /**
  * @Author: Daihaitao

@@ -4,6 +4,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ListUpdateCallback;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.imreal.mutiadapter.utils.Logger;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,7 +28,7 @@ public class ItemListUpdateCallback implements ListUpdateCallback {
 
     @Override
     public void onInserted(int position, int count) {
-        Utils.d(TAG, "onInserted position: %d, count: %d", position, count);
+        Logger.d(TAG, "onInserted position: %d, count: %d", position, count);
         mAdapter.notifyItemRangeInserted(position, count);
         for (ListUpdateCallback callback : mCallbacks) {
             if (callback != null) {
@@ -37,7 +39,7 @@ public class ItemListUpdateCallback implements ListUpdateCallback {
 
     @Override
     public void onRemoved(int position, int count) {
-        Utils.d(TAG, "onRemoved position: %d, count: %d", position, count);
+        Logger.d(TAG, "onRemoved position: %d, count: %d", position, count);
         mAdapter.notifyItemRangeRemoved(position, count);
         for (ListUpdateCallback callback : mCallbacks) {
             if (callback != null) {
@@ -48,7 +50,7 @@ public class ItemListUpdateCallback implements ListUpdateCallback {
 
     @Override
     public void onMoved(int fromPosition, int toPosition) {
-        Utils.d(TAG, "onMoved fromPosition: %d, toPosition: %d", fromPosition, toPosition);
+        Logger.d(TAG, "onMoved fromPosition: %d, toPosition: %d", fromPosition, toPosition);
         mAdapter.notifyItemMoved(fromPosition, toPosition);
         for (ListUpdateCallback callback : mCallbacks) {
             if (callback != null) {
@@ -59,7 +61,7 @@ public class ItemListUpdateCallback implements ListUpdateCallback {
 
     @Override
     public void onChanged(int position, int count, @Nullable Object payload) {
-        Utils.d(TAG, "onChanged position: %d, count: %d", position, count);
+        Logger.d(TAG, "onChanged position: %d, count: %d", position, count);
         mAdapter.notifyItemRangeChanged(position, count, payload);
         for (ListUpdateCallback callback : mCallbacks) {
             if (callback != null) {

@@ -4,7 +4,7 @@ import com.imreal.sample.item.MessageItem;
 import com.imreal.sample.item.SectionItem;
 import com.imreal.mutiadapter.IItem;
 import com.imreal.mutiadapter.MutiAdapter;
-import com.imreal.mutiadapter.Utils;
+import com.imreal.sample.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

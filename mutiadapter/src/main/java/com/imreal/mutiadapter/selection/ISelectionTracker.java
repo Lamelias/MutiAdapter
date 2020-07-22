@@ -1,6 +1,8 @@
-package com.imreal.mutiadapter;
+package com.imreal.mutiadapter.selection;
 
 import android.os.Bundle;
+
+import com.imreal.mutiadapter.IItem;
 
 import java.util.List;
 
