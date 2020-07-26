@@ -1,5 +1,5 @@
 # MutiAdapter
-An simple encapsulation of RecyclerView#Adapter.
+A simple encapsulation of RecyclerView#Adapter.
 
 ## feature
 1. Special item was supported.
