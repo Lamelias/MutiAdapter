@@ -3,9 +3,9 @@ package com.imreal.mutiadapter.selection;
 import java.util.List;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/7 15:34
- * @Description:
+ * Author: Daihaitao
+ * Date: 2020/7/7 15:34
+ * Description:
  */
 public interface ISelectable<T> {
 

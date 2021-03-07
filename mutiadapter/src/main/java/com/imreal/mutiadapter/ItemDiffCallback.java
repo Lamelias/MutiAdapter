@@ -5,9 +5,9 @@ import androidx.recyclerview.widget.DiffUtil;
 
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 18:44
- * @Description:
+ * Author: Daihaitao
+ * Date: 2020/7/6 18:44
+ * Description: callback for diff
  */
 public class ItemDiffCallback extends DiffUtil.ItemCallback<IItem> {
 

@@ -11,9 +11,9 @@ import java.util.Set;
 
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 19:22
- * @Description:
+ * Author: Daihaitao
+ * Date: 2020/7/6 19:22
+ * Description: callback for list update
  */
 public class ItemListUpdateCallback implements ListUpdateCallback {
 

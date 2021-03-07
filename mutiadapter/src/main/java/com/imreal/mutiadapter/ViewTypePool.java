@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/9 11:34
- * @Description: An utility class for view type generation
+ * Author: Daihaitao
+ * Date: 2020/7/9 11:34
+ * Description: An utility class for view type generation
  */
 public class ViewTypePool {
 

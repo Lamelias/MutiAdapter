@@ -4,9 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ListUpdateCallback;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/8 19:08
- * @Description:
+ * Author: Daihaitao
+ * Date: 2020/7/8 19:08
+ * Description:
  */
 public class MutiListUpdateCallback implements ListUpdateCallback {
     @Override

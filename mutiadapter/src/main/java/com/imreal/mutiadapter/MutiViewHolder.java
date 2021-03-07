@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.imreal.mutiadapter.selection.ISelectionTracker;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 14:43
- * @Description: Base view holder class for item extends IItem
+ * Author: Daihaitao
+ * Date: 2020/7/6 14:43
+ * Description: Base view holder class for item extends IItem
  */
 public abstract class MutiViewHolder<I extends IItem> extends RecyclerView.ViewHolder {
 

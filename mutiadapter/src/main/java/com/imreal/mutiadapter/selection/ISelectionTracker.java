@@ -7,9 +7,9 @@ import com.imreal.mutiadapter.IItem;
 import java.util.List;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/7 17:43
- * @Description: track item selection
+ * Author: Daihaitao
+ * Date: 2020/7/7 17:43
+ * Description: track item selection
  */
 public interface ISelectionTracker<T> {
     /**
@@ -35,7 +35,7 @@ public interface ISelectionTracker<T> {
 
     /**
      * @param selectableKeys Toggled some items's  selected state
-     * @param selected
+     * @param selected whether select or not
      */
     void setItemsSelected(List<IItem> selectableKeys, boolean selected);
 

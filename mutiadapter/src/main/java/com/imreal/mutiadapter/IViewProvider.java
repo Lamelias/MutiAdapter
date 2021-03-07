@@ -7,9 +7,9 @@ import androidx.annotation.LayoutRes;
 import com.imreal.mutiadapter.selection.ISelectionTracker;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 14:27
- * @Description: A bridge between ViewHolder & IItem
+ * Author: Daihaitao
+ * Date: 2020/7/6 14:27
+ * Description: A bridge between ViewHolder and  IItem
  */
 public interface IViewProvider<V extends MutiViewHolder, I extends IItem> {
     /**
@@ -17,7 +17,7 @@ public interface IViewProvider<V extends MutiViewHolder, I extends IItem> {
      * @param viewType The view type of the new View
      * @return A new ViewHolder that holds a View of the given view type.
      */
-    V createViewHolder(ViewGroup parent, @LayoutRes int viewType);
+    V createViewHolder(ViewGroup parent, int viewType);
 
     /**
      * @param holder           The ViewHolder which should be updated to represent the contents of the item at the given position in the data set.
@@ -33,13 +33,13 @@ public interface IViewProvider<V extends MutiViewHolder, I extends IItem> {
 
     /**
      * @param viewType Type to be verified
-     * @return True if this view provider supports specified {@param viewType}
+     * @return True if this view provider supports specified viewType
      */
     boolean supportViewType(int viewType);
 
     /**
      * @param viewHolder Holder to be verified
-     * @return True if this view provider support the specified {@param viewHolder}
+     * @return True if this view provider support the specified viewHolder
      */
     boolean supportViewHolder(MutiViewHolder viewHolder);
 }

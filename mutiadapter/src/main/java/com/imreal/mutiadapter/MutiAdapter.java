@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 14:24
- * @Description: A simple encapsulation to support special item and selection and diff
+ * Author: Daihaitao
+ * Date: 2020/7/6 14:24
+ * Description: A simple encapsulation to support special item and selection and diff
  */
 public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements AsyncListDiffer.ListListener<IItem>, ISelectable<IItem> {
 
@@ -117,7 +117,7 @@ public class MutiAdapter extends RecyclerView.Adapter<MutiViewHolder> implements
     }
 
     /**
-     * Register providers to support some certain view holder&view type
+     * Register providers to support some certain view holder and view type
      *
      * @param providers To be registered
      */

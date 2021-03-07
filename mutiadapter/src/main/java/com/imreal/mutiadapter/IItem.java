@@ -3,9 +3,9 @@ package com.imreal.mutiadapter;
 import android.os.Parcelable;
 
 /**
- * @Author: Daihaitao
- * @Date: 2020/7/6 14:33
- * @Description: Items which {@link MutiAdapter} contains must implement this interface
+ * Author: Daihaitao
+ * Date: 2020/7/6 14:33
+ * Description: Items which {@link MutiAdapter} contains must implement this interface
  */
 public interface IItem extends Parcelable {
 
